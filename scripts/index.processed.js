@@ -8877,7 +8877,36 @@
 
 	'use strict';
 
-		__webpack_require__(327);
+	__webpack_require__(327);
+
+	var _TriangleType = __webpack_require__(330);
+
+	var _TriangleType2 = _interopRequireDefault(_TriangleType);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// Example usage
+	console.log(new _TriangleType2.default(4, 5, 6).getType());
+
+	// Add a ui for this
+	var side1 = document.getElementById('triangle-side-1');
+	var side2 = document.getElementById('triangle-side-2');
+	var side3 = document.getElementById('triangle-side-3');
+	var result = document.querySelector('.triangle-type');
+
+	[side1, side2, side3].forEach(function (side) {
+	    ['input', 'change'].forEach(function (event) {
+	        side.addEventListener(event, function (e) {
+	            try {
+	                result.innerText = new _TriangleType2.default(parseFloat(side1.value), parseFloat(side2.value), parseFloat(side3.value)).getType();
+	                result.classList.remove('error');
+	            } catch (error) {
+	                result.innerText = error;
+	                result.classList.add('error');
+	            }
+	        });
+	    });
+	});
 
 /***/ }),
 /* 327 */
