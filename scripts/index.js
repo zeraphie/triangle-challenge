@@ -16,9 +16,9 @@ let result = document.querySelector('.triangle-type');
         side.addEventListener(event, e => {
             try {
                 result.innerText = new TriangleType(
-                    parseFloat(side1.value),
-                    parseFloat(side2.value),
-                    parseFloat(side3.value)
+                    +side1.value,
+                    +side2.value,
+                    +side3.value
                 ).getType();
                 result.classList.remove('error');
             } catch(error) {
