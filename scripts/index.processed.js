@@ -9012,7 +9012,7 @@
 	        var triangle = _ref2.triangle,
 	            expected = _ref2.expected;
 
-	        describe('When triangleType is called using "' + triangle.join(', ') + '" as sides', function () {
+	        describe('When TriangleType is called using "' + triangle.join(', ') + '" as sides', function () {
 	            it('should return throw "' + expected + '"', function () {
 	                _chai.assert.throws(function () {
 	                    new (Function.prototype.bind.apply(_TriangleType2.default, [null].concat(_toConsumableArray(triangle))))().getType();
