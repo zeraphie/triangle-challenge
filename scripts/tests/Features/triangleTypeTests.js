@@ -75,7 +75,7 @@ export default function triangleTypeTests(){
     });
     
     trianglesInvalid.forEach(({triangle, expected}) => {
-        describe(`When triangleType is called using "${triangle.join(', ')}" as sides`, () => {
+        describe(`When TriangleType is called using "${triangle.join(', ')}" as sides`, () => {
             it(`should return throw "${expected}"`, () => {
                 assert.throws(() => {new TriangleType(...triangle).getType()}, Error, expected);
             });
