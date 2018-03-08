@@ -8898,7 +8898,7 @@
 	    ['input', 'change'].forEach(function (event) {
 	        side.addEventListener(event, function (e) {
 	            try {
-	                result.innerText = new _TriangleType2.default(parseFloat(side1.value), parseFloat(side2.value), parseFloat(side3.value)).getType();
+	                result.innerText = new _TriangleType2.default(+side1.value, +side2.value, +side3.value).getType();
 	                result.classList.remove('error');
 	            } catch (error) {
 	                result.innerText = error;
